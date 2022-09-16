@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1663336794643" clover="3.2.0">
+  <project timestamp="1663336794643" name="All files">
+    <metrics statements="51" coveredstatements="47" conditionals="6" coveredconditionals="2" methods="7" coveredmethods="7" elements="64" coveredelements="56" complexity="0" loc="51" ncloc="51" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/chrisyalamov/Documents/Projects/oauth2_idp/index.ts">
+      <metrics statements="51" coveredstatements="47" conditionals="6" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
+      <line num="36" count="4" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="45" count="4" type="stmt"/>
+      <line num="52" count="4" type="stmt"/>
+      <line num="69" count="4" type="stmt"/>
+      <line num="70" count="4" type="stmt"/>
+      <line num="71" count="4" type="stmt"/>
+      <line num="79" count="4" type="stmt"/>
+      <line num="86" count="4" type="stmt"/>
+      <line num="110" count="4" type="stmt"/>
+      <line num="111" count="4" type="cond" truecount="0" falsecount="1"/>
+      <line num="114" count="4" type="cond" truecount="0" falsecount="1"/>
+      <line num="115" count="0" type="stmt"/>
+      <line num="119" count="4" type="stmt"/>
+      <line num="122" count="4" type="stmt"/>
+      <line num="124" count="4" type="stmt"/>
+      <line num="133" count="4" type="stmt"/>
+      <line num="163" count="3" type="stmt"/>
+      <line num="166" count="3" type="stmt"/>
+      <line num="169" count="3" type="cond" truecount="0" falsecount="1"/>
+      <line num="170" count="0" type="stmt"/>
+      <line num="174" count="3" type="stmt"/>
+      <line num="177" count="3" type="stmt"/>
+      <line num="180" count="3" type="stmt"/>
+      <line num="186" count="3" type="stmt"/>
+      <line num="193" count="3" type="stmt"/>
+      <line num="195" count="3" type="stmt"/>
+      <line num="225" count="1" type="stmt"/>
+      <line num="228" count="1" type="stmt"/>
+      <line num="231" count="1" type="stmt"/>
+      <line num="234" count="1" type="stmt"/>
+      <line num="237" count="1" type="stmt"/>
+      <line num="240" count="1" type="stmt"/>
+      <line num="245" count="1" type="stmt"/>
+      <line num="252" count="1" type="stmt"/>
+      <line num="254" count="1" type="stmt"/>
+      <line num="280" count="1" type="stmt"/>
+      <line num="281" count="1" type="stmt"/>
+      <line num="282" count="1" type="stmt"/>
+      <line num="287" count="0" type="stmt"/>
+      <line num="291" count="1" type="stmt"/>
+      <line num="294" count="1" type="cond" truecount="2" falsecount="1"/>
+      <line num="295" count="0" type="stmt"/>
+      <line num="299" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
