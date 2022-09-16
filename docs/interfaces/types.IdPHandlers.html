@@ -23,7 +23,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">IdPHandlers</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:24</li></ul></aside>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L33">types.ts:33</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -52,7 +52,10 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The getAccessToken handler is called by the IdP to retrieve an access token from the database, in a way defined by the developer. Returns the AccessToken object with the generated ID.</p>
 
-<h3>Returns</h3></div>
+<h3>Returns</h3>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">id</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1"> </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;access_tokens&quot;</span><span class="hl-1">).</span><span class="hl-4">findOne</span><span class="hl-1">({ </span><span class="hl-2">_id:</span><span class="hl-1"> </span><span class="hl-4">ObjectId</span><span class="hl-1">(</span><span class="hl-2">id</span><span class="hl-1">) });</span><br/><span class="hl-1">}</span>
+</code></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -62,7 +65,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.AccessToken.html" class="tsd-signature-type" data-tsd-kind="Interface">AccessToken</a><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:62</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L98">types.ts:98</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="getGrant" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Grant</span><a href="#getGrant" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">get<wbr/>Grant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.AuthorizationGrant.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthorizationGrant</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -75,7 +78,10 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The getGrant handler is called by the IdP to retrieve an authorization grant from the database, in a way defined by the developer. Returns the AuthorizationGrant object with the generated ID.</p>
 
-<h3>Returns</h3></div>
+<h3>Returns</h3>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">id</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;authorization_grants&quot;</span><span class="hl-1">).</span><span class="hl-4">findOne</span><span class="hl-1">({ </span><span class="hl-2">_id:</span><span class="hl-1"> </span><span class="hl-4">ObjectId</span><span class="hl-1">(</span><span class="hl-2">id</span><span class="hl-1">) });</span><br/><span class="hl-1">}</span>
+</code></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -85,7 +91,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.AuthorizationGrant.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthorizationGrant</a><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:39</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L59">types.ts:59</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="revokeAccessToken" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>revoke<wbr/>Access<wbr/>Token</span><a href="#revokeAccessToken" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">revoke<wbr/>Access<wbr/>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -98,7 +104,10 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The revokeAccessToken handler is called by the IdP to revoke an access token which exists in the database, in a way defined by the developer.</p>
 
-<h3>Returns</h3></div>
+<h3>Returns</h3>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">id</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1"> </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;access_tokens&quot;</span><span class="hl-1">).</span><span class="hl-4">deleteOne</span><span class="hl-1">({ </span><span class="hl-2">_id:</span><span class="hl-1"> </span><span class="hl-4">ObjectId</span><span class="hl-1">(</span><span class="hl-2">id</span><span class="hl-1">) });</span><br/><span class="hl-1">}</span>
+</code></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -108,7 +117,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:70</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L111">types.ts:111</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="revokeGrant" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>revoke<wbr/>Grant</span><a href="#revokeGrant" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">revoke<wbr/>Grant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -120,6 +129,9 @@
 <li class="tsd-signature" id="__type-6.__type-7"><span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The revokeGrant handler is called by the IdP to revoke an authorization grant which exists in the database, in a way defined by the developer.</p>
+
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">id</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;authorization_grants&quot;</span><span class="hl-1">).</span><span class="hl-4">deleteOne</span><span class="hl-1">({ </span><span class="hl-2">_id:</span><span class="hl-1"> </span><span class="hl-4">ObjectId</span><span class="hl-1">(</span><span class="hl-2">id</span><span class="hl-1">) });</span><br/><span class="hl-1">}</span>
+</code></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -130,7 +142,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:46</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L71">types.ts:71</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="storeAccessToken" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>store<wbr/>Access<wbr/>Token</span><a href="#storeAccessToken" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">store<wbr/>Access<wbr/>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><a href="types.AccessToken.html" class="tsd-signature-type" data-tsd-kind="Interface">AccessToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -143,7 +155,10 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The storeAccessToken handler is called by the IdP to store an access token in the database, in a way defined by the developer. Returns the AccessToken object with the generated ID.</p>
 
-<h3>Returns</h3></div>
+<h3>Returns</h3>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">token</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">let</span><span class="hl-1"> </span><span class="hl-2">storedToken</span><span class="hl-1"> = </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;access_tokens&quot;</span><span class="hl-1">).</span><span class="hl-4">insertOne</span><span class="hl-1">(</span><span class="hl-2">token</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-2">storedToken</span><span class="hl-1">.</span><span class="hl-2">_id</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -153,7 +168,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:54</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L85">types.ts:85</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="storeAuthorizationGrant" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>store<wbr/>Authorization<wbr/>Grant</span><a href="#storeAuthorizationGrant" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">store<wbr/>Authorization<wbr/>Grant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>grant<span class="tsd-signature-symbol">: </span><a href="types.AuthorizationGrant.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthorizationGrant</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.AuthorizationGrant.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthorizationGrant</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -166,7 +181,10 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The storeAuthorizationGrant handler is called by the IdP to store an authorization grant in the database, in a way defined by the developer. Returns the AuthorizationGrant object with the generated ID.</p>
 
-<h3>Returns</h3></div>
+<h3>Returns</h3>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">async</span><span class="hl-1"> (</span><span class="hl-2">grant</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">let</span><span class="hl-1"> </span><span class="hl-2">storedGrant</span><span class="hl-1"> = </span><span class="hl-3">await</span><span class="hl-1"> </span><span class="hl-2">db</span><span class="hl-1">.</span><span class="hl-4">collection</span><span class="hl-1">(</span><span class="hl-5">&quot;authorization_grants&quot;</span><span class="hl-1">).</span><span class="hl-4">insertOne</span><span class="hl-1">(</span><span class="hl-2">grant</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-3">return</span><span class="hl-1"> </span><span class="hl-2">storedGrant</span><span class="hl-1">.</span><span class="hl-2">_id</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -176,7 +194,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.AuthorizationGrant.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthorizationGrant</a><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types.ts:31</li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/chrisyalamov/oauth2_idp/blob/03dcbf7/types.ts#L46">types.ts:46</a></li></ul></aside></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div>
 <nav class="tsd-navigation secondary menu-sticky">
