@@ -222,4 +222,21 @@ describe('Authorization code flow', () => {
 
     expect(verification).toBeDefined()
   })
+
+  it('should return error on invalid client', async () => {
+    const idp = new IdP(options)
+
+    const t = async () => {
+      // Obtain an authorization code
+      await idp.generateAuthorizationCode({
+        user: '1',
+        scope: 'write',
+        // Invalid client ID
+        client: '2',
+        redirectUri: 'http://localhost:3000'
+      })
+    }
+
+    await expect(t).rejects.toThrow('Invalid client')
+  })
 })
