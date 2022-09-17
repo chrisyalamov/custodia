@@ -1,6 +1,6 @@
 import {
   IdP
-} from './index'
+} from './dist/index'
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 

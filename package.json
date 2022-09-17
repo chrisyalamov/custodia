@@ -1,18 +1,21 @@
 {
   "name": "custodia",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeScript library for creating an OAuth2 Identity Provider.",
-  "main": "index.ts",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "prepublish": "npx tsc"
   },
   "type": "module",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "author": "Christian Yalamov",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.0.2",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
     "eslint": "^8.23.1",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -25,7 +28,6 @@
   },
   "dependencies": {
     "@types/jsonwebtoken": "^8.5.9",
-    "@typescript-eslint/parser": "^5.37.0",
     "bcrypt": "^5.0.1",
     "jsonwebtoken": "^8.5.1"
   }
