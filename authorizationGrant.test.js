@@ -239,4 +239,45 @@ describe('Authorization code flow', () => {
 
     await expect(t).rejects.toThrow('Invalid client')
   })
+
+  it('should return error on invalid redirectUri', async () => {
+    const idp = new IdP(options)
+
+    const t = async () => {
+      // Obtain an authorization code
+      await idp.generateAuthorizationCode({
+        user: '1',
+        scope: 'write',
+        client: '1',
+        // Invalid redirect URI
+        redirectUri: 'http://localhost:3001'
+      })
+    }
+
+    await expect(t).rejects.toThrow('Invalid redirect URI')
+  })
+
+  it('should return error on invalid client secret (exchange)', async () => {
+    const idp = new IdP(options)
+
+    const grant = await idp.generateAuthorizationCode({
+      user: '1',
+      scope: 'write',
+      client: '1',
+      redirectUri: 'http://localhost:3000'
+    })
+
+    const t = async () => {
+      // Exchange the token
+      await idp.exchangeCode({
+        code: grant,
+        client: '1',
+        redirectUri: 'http://localhost:3000',
+        // Invalid client secret
+        clientSecret: 'test2'
+      })
+    }
+
+    await expect(t).rejects.toThrow('Invalid client secret')
+  })
 })
